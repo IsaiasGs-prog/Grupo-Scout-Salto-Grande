@@ -1,0 +1,45 @@
+:root {
+  /* Institucionales */
+  --azul:        #1a3a6b;
+  --azul-claro:  #2c5282;
+  --azul-oscuro: #0f2447;
+  --rojo:        #c1272d;
+  --rojo-oscuro: #8f1b20;
+  --rojo-claro:  #e63946;
+  --violeta:        #6b3fa0;
+  --violeta-claro:  #8a5fc4;
+  --violeta-oscuro: #4a2a70;
+
+  /* Ramas */
+  --manada:     #f5b800;
+  --unidad:     #2d7a3e;
+  --caminantes: #2c7bb6;
+  --rovers:     #c1272d;
+
+  /* Neutros */
+  --crema:      #faf7f2;
+  --beige:      #f5efe6;
+  --blanco:     #ffffff;
+  --gris-claro: #e8e4dd;
+  --gris:       #888888;
+  --texto:      #1f2430;
+  --texto-soft: #5a6070;
+
+  --dorado:     #e6b422;
+
+  /* Sombras */
+  --sombra-sm: 0 2px 8px rgba(15, 36, 71, 0.06);
+  --sombra:    0 8px 20px rgba(15, 36, 71, 0.10);
+  --sombra-lg: 0 20px 48px rgba(15, 36, 71, 0.18);
+
+  /* Layout */
+  --radio:       16px;
+  --radio-sm:    12px;
+  --radio-full:  999px;
+  --container:   1200px;
+  --transicion:  all 0.3s ease;
+
+  /* Fuentes */
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+}

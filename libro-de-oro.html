@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro de Oro · Grupo Scout</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/libro-oro.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__container">
+      <a href="index.html" class="navbar__logo">
+        <div class="navbar__logo-img">⚜️</div>
+        <div class="navbar__logo-text">
+          Grupo Scout
+          <span>Argentina · Desde 1985</span>
+        </div>
+      </a>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#ramas">Ramas</a></li>
+        <li><a href="libro-de-oro.html" class="active">Libro de Oro</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HEADER LIBRO DE ORO ===== -->
+  <header class="libro-hero">
+    <div class="container">
+      <a href="index.html" class="libro-hero__back">
+        <i class="fas fa-arrow-left"></i> Volver al inicio
+      </a>
+      <h1 class="libro-hero__title">
+        📖 <span>Libro de Oro</span>
+      </h1>
+      <p class="libro-hero__subtitle">
+        Nuestra bitácora de campamentos y grandes aventuras.
+        Elegí una rama y reviví los momentos.
+      </p>
+    </div>
+  </header>
+
+  <!-- ===== FILTROS DE RAMA ===== -->
+  <section class="libro-main">
+    <div class="container">
+      <!-- Tabs de ramas -->
+      <div class="ramas-tabs" id="ramasTabs">
+        <button class="rama-btn rama-btn--manada active" data-rama="manada">
+          <span class="rama-btn__emoji">🐾</span>
+          <span class="rama-btn__txt">
+            <strong>Manada</strong>
+            <small>6 a 11 años</small>
+          </span>
+        </button>
+
+        <button class="rama-btn rama-btn--unidad" data-rama="unidad">
+          <span class="rama-btn__emoji">⚜️</span>
+          <span class="rama-btn__txt">
+            <strong>Unidad Scout</strong>
+            <small>11 a 14 años</small>
+          </span>
+        </button>
+
+        <button class="rama-btn rama-btn--caminantes" data-rama="caminantes">
+          <span class="rama-btn__emoji">🧭</span>
+          <span class="rama-btn__txt">
+            <strong>Caminantes</strong>
+            <small>14 a 17 años</small>
+          </span>
+        </button>
+
+        <button class="rama-btn rama-btn--rovers" data-rama="rovers">
+          <span class="rama-btn__emoji">🎒</span>
+          <span class="rama-btn__txt">
+            <strong>Rovers</strong>
+            <small>17 a 21 años</small>
+          </span>
+        </button>
+      </div>
+
+      <!-- Encabezado dinámico de la rama -->
+      <div class="rama-header" id="ramaHeader">
+        <h2 id="ramaTitulo">🐾 Manada</h2>
+        <p id="ramaDescripcion">Los más pequeños del grupo, aprendiendo jugando.</p>
+      </div>
+
+      <!-- Muro de recuerdos (grid de álbumes) -->
+      <div class="muro" id="muro"></div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL (para el álbum de fotos) ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal__header">
+        <div>
+          <div class="modal__fecha" id="modalFecha"></div>
+          <h3 class="modal__titulo" id="modalTitulo"></h3>
+        </div>
+        <button class="modal__close" id="modalClose" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__galeria" id="modalGaleria"></div>
+        <div class="modal__descripcion" id="modalDescripcion"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <div class="footer__logo">⚜️</div>
+        <div>
+          <strong>Grupo Scout N° 1234</strong>
+          <p>Construyendo un mundo mejor desde 1985.</p>
+        </div>
+      </div>
+      <ul class="footer__links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#ramas">Ramas</a></li>
+        <li><a href="libro-de-oro.html">Libro de Oro</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <p class="footer__copy">© 2026 Grupo Scout Salto Grande N° 527 · Hecho por Isaias.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/libro-oro.js"></script>
+  <script src="js/modal.js"></script>
+</body>
+</html>

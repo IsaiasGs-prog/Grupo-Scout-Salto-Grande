@@ -1,0 +1,38 @@
+grupo-scout/
+│
+├── index.html                  # Página principal (estructura HTML)
+│
+├── css/
+│   ├── variables.css           # Variables globales (colores, tipografía)
+│   ├── base.css                # Reset, tipografía, utilidades generales
+│   ├── navbar.css              # Barra de navegación
+│   ├── hero.css                # Sección de bienvenida
+│   ├── historia.css            # Historia + carrusel
+│   ├── libro-oro.css           # Timeline + tabs de ramas
+│   ├── modal.css               # Modal de álbum de fotos
+│   ├── contacto.css            # Formulario + mapa
+│   ├── footer.css              # Pie de página
+│   └── responsive.css          # Media queries (todos los breakpoints)
+│
+├── js/
+│   ├── data.js                 # Datos: ramas, eventos, campamentos
+│   ├── navbar.js               # Menú hamburguesa
+│   ├── carrusel.js             # Lógica del carrusel de fotos
+│   ├── libro-oro.js            # Filtros de rama + timeline
+│   ├── modal.js                # Abrir/cerrar modal de álbum
+│   └── contacto.js             # Validación y envío del formulario
+│
+└── img/
+    ├── logo-scout.png          # Logo del grupo
+    ├── insignia.png            # Insignia scout Argentina
+    ├── carrusel/
+    │   ├── foto-1.jpg
+    │   ├── foto-2.jpg
+    │   └── ...
+    └── eventos/
+        ├── manada-2024-01/
+        │   ├── foto-1.jpg
+        │   └── foto-2.jpg
+        └── ...
+
+

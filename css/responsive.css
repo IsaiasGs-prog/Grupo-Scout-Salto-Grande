@@ -1,0 +1,73 @@
+@media (max-width: 992px) {
+  .section-title { font-size: 2rem; }
+  .hero__title { letter-spacing: -1px; }
+  .cta-libro__box {
+    flex-direction: column;
+    text-align: center;
+    padding: 48px 32px;
+  }
+  .cta-libro__content p { margin-left: auto; margin-right: auto; }
+  .hero__stats { gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle { display: block; }
+
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--azul-oscuro);
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    display: none;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid var(--rojo);
+  }
+  .navbar__menu.abierto { display: flex; }
+
+  .hero { min-height: auto; padding: 90px 0 70px; }
+  .hero__deco { display: none; }
+  .hero__title { font-size: 2.4rem; letter-spacing: -1px; }
+  .hero__subtitle { font-size: 1.05rem; }
+  .hero__stat strong { font-size: 1.8rem; }
+  .hero__stats { gap: 20px; padding-top: 24px; }
+
+  .valores-section,
+  .ramas-section,
+  .contacto { padding: 70px 0; }
+
+  .section-title { font-size: 1.7rem; }
+  .section-subtitle { font-size: 1rem; margin-bottom: 40px; }
+
+  .libro-hero { padding: 40px 0 70px; }
+  .libro-main { margin-top: -30px; padding-bottom: 70px; }
+
+  .ramas-tabs {
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+  }
+  .rama-btn { padding: 12px; }
+  .rama-btn__emoji { font-size: 1.4rem; }
+  .rama-btn__txt strong { font-size: 0.85rem; }
+
+  .muro { grid-template-columns: 1fr; }
+  .rama-header h2 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .hero__buttons { flex-direction: column; width: 100%; }
+  .hero__buttons .btn { width: 100%; }
+  .hero__title { font-size: 2rem; }
+  .hero__stat strong { font-size: 1.5rem; }
+  .hero__stat span { font-size: 0.8rem; }
+
+  .ramas-tabs { grid-template-columns: 1fr; }
+
+  .cta-libro__box { padding: 36px 24px; border-radius: 20px; }
+  .cta-libro__content h2 { font-size: 1.6rem; }
+  .cta-libro__deco { font-size: 4rem; }
+}
