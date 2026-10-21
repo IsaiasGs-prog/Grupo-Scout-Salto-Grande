@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Grupo Scout Salto Grande · Construyendo un mundo mejor desde 1985.">
-  <title>Grupo Scout · Salto Grande</title>
+  <meta name="description" content="Grupo Scout Salto Grande N° 527 · Construyendo un mundo mejor.">
+  <title>Grupo Scout Salto Grande N° 527</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/historia.css">
   <link rel="stylesheet" href="css/landing.css">
   <link rel="stylesheet" href="css/contacto.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="css/historia.css">
   <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
         <div class="navbar__logo-img">⚜️</div>
         <div class="navbar__logo-text">
           Grupo Scout
-          <span>Salto Grande · Desde 1985</span>
+          <span>Salto Grande.</span>
         </div>
       </a>
 
@@ -41,6 +41,7 @@
 
       <ul class="navbar__menu" id="navMenu">
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#historia">Historia</a></li>
         <li><a href="#ramas">Ramas</a></li>
         <li><a href="libro-de-oro.html">Libro de Oro</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -48,27 +49,23 @@
     </div>
   </nav>
 
-  <!-- ===== HERO MODERNO ===== -->
+  <!-- ===== HERO MEJORADO ===== -->
   <header class="hero" id="inicio">
-    <!-- Fondo con imagen + gradiente superpuesto -->
-    <div class="hero__bg"></div>
+    <div class="hero__bg" style="background-image: url('img/hero/formacion.jpeg');"></div>
     <div class="hero__overlay"></div>
-
-    <!-- Elementos decorativos flotantes -->
-    <div class="hero__deco hero__deco--1">⚜️</div>
-    <div class="hero__deco hero__deco--2">🏕️</div>
-    <div class="hero__deco hero__deco--3">🌲</div>
+    <div class="hero__blob hero__blob--1"></div>
+    <div class="hero__blob hero__blob--2"></div>
 
     <div class="container hero__container">
       <div class="hero__content">
+        <!-- ACÁ SACAMOS "reveal" -->
         <span class="hero__badge">
           <i class="fas fa-star"></i> Grupo Scout Salto Grande N° 527
         </span>
 
         <h1 class="hero__title">
           Construyendo<br>
-          <span class="hero__title-gradient">un mundo mejor</span><br>
-          desde 1985.
+          <span class="hero__title-gradient">un mundo mejor.</span><br>
         </h1>
 
         <p class="hero__subtitle">
@@ -84,209 +81,350 @@
             <i class="fas fa-book-open"></i> Ver Libro de Oro
           </a>
         </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Stats rápidas -->
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <strong>+35</strong>
-            <span>Años de historia</span>
+  <!-- ===== NUEVA SECCIÓN: STATS ANIMADOS ===== -->
+  <section class="stats-bar" id="stats">
+    <div class="container stats-bar__grid">
+      <!-- ACÁ TAMBIÉN SACAMOS "reveal" A CADA ITEM -->
+      <div class="stat-item">
+        <strong class="contador" data-target="35">0</strong>
+        <span>Años de historia</span>
+      </div>
+      <div class="stat-item">
+        <strong class="contador" data-target="200">0</strong>
+        <span>Familias</span>
+      </div>
+      <div class="stat-item">
+        <strong class="contador" data-target="4">0</strong>
+        <span>Ramas</span>
+      </div>
+      <div class="stat-item">
+        <strong class="contador" data-target="150">0</strong>
+        <span>Campamentos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HISTORIA + COLLAGE CORREGIDO ===== -->
+  <section class="historia" id="historia">
+    <div class="container">
+      <span class="section-eyebrow">Nuestra historia</span>
+      <h2 class="section-title">Más de 35 años de aventuras</h2>
+      <p class="section-subtitle">
+        Desde 1985 formamos generaciones de scouts. Estas son algunas postales
+        de nuestra historia, campamentos y momentos compartidos.
+      </p>
+
+      <div class="historia__grid">
+        <div class="historia__texto reveal">
+          <h3>Un poco de nosotros</h3>
+          <p>El Grupo Scout Salto Grande N° 527 nació en 1985 en el corazón de la ciudad, con la misión de ofrecer a niños y jóvenes un espacio de educación no formal basado en los valores del escultismo.</p>
+          <p>A lo largo de estos años, cientos de familias pasaron por nuestras filas, compartiendo campamentos, excursiones, servicios comunitarios y, sobre todo, amistades para toda la vida.</p>
+
+          <ul class="valores-lista">
+            <li><i class="fas fa-leaf"></i> Respeto por la naturaleza</li>
+            <li><i class="fas fa-hands-helping"></i> Servicio a la comunidad</li>
+            <li><i class="fas fa-users"></i> Trabajo en equipo</li>
+            <li><i class="fas fa-star"></i> Superación personal</li>
+          </ul>
+
+          <a href="libro-de-oro.html" class="btn btn--primary" style="margin-top: 24px;">
+            <i class="fas fa-book-open"></i> Ver el Libro de Oro
+          </a>
+        </div>
+
+        <!-- Collage con imágenes que abren en Lightbox -->
+        <div class="collage reveal">
+          <div class="collage__item collage__item--1">
+            <img src="img/carrusel/1.jpeg" alt="Campamento 1985">
+            <span class="collage__caption">Puente Mono</span>
           </div>
-          <div class="hero__stat">
-            <strong>+200</strong>
-            <span>Familias</span>
+          <div class="collage__item collage__item--2">
+            <img src="img/carrusel/2.jpeg" alt="Fogón">
+            <span class="collage__caption">Bicicleteada Anual</span>
           </div>
-          <div class="hero__stat">
-            <strong>4</strong>
-            <span>Ramas</span>
+          <div class="collage__item collage__item--3">
+            <img src="img/carrusel/3.jpeg" alt="Excursión">
+            <span class="collage__caption">Bienvenida a rama Scout</span>
+          </div>
+          <div class="collage__item collage__item--4">
+            <img src="img/carrusel/5.jpeg" alt="Servicio comunitario">
+            <span class="collage__caption">Taller Digital</span>
+          </div>
+          <div class="collage__item collage__item--5">
+            <img src="img/carrusel/6.jpeg" alt="Campamento actual">
+            <span class="collage__caption">Generaciones</span>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Flecha indicadora de scroll -->
-    <a href="#valores" class="hero__scroll" aria-label="Bajar">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </header>
-
-  <!-- ===== VALORES ===== -->
+  <!-- ===== VALORES (DISEÑO REVISTA / DIARIO) ===== -->
   <section class="valores-section" id="valores">
     <div class="container">
       <span class="section-eyebrow">Nuestros pilares</span>
       <h2 class="section-title">Lo que nos mueve</h2>
       <p class="section-subtitle">
-        Cada campamento, cada fogón y cada servicio refuerza los valores que nos forman como personas.
+        No solo hacemos campamentos, formamos personas. Descubrí los valores que guían cada paso que damos como grupo.
       </p>
 
-      <div class="valores-grid reveal">
-        <article class="valor-card">
-          <div class="valor-card__icon valor-card__icon--verde">
-            <i class="fas fa-leaf"></i>
+      <div class="revista-grid reveal">
+        
+        <!-- Pilar 1: Foto a la derecha -->
+        <article class="pilar-articulo">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">01</span>
+            <h3>Vida al aire libre</h3>
+            <p class="pilar-articulo__bajada">La naturaleza es nuestro aula.</p>
+            <p>Aprendemos a vivir en ella, a respetar sus tiempos y a cuidar el ambiente. Cada campamento es una oportunidad para desconectarnos de las pantallas y reconectar con lo esencial: el fuego, el cielo y la tierra.</p>
+            <p>Los chicos descubren que el esfuerzo de armar una carpa o cocinar al fogón tiene una recompensa que no se compara con nada.</p>
           </div>
-          <h3>Naturaleza</h3>
-          <p>Vivimos y cuidamos el ambiente. La naturaleza es nuestra aula.</p>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/naturaleza.jpg" alt="Naturaleza">
+            <div class="pilar-articulo__icono"><i class="fas fa-leaf"></i></div>
+          </div>
         </article>
 
-        <article class="valor-card">
-          <div class="valor-card__icon valor-card__icon--rojo">
-            <i class="fas fa-hands-helping"></i>
+        <!-- Pilar 2: Foto a la izquierda (Clase --inverso) -->
+        <article class="pilar-articulo pilar-articulo--inverso">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">02</span>
+            <h3>Aventura</h3>
+            <p class="pilar-articulo__bajada">Exploramos, descubrimos y nos superamos.</p>
+            <p>La vida scout está llena de desafíos que nos invitan a salir de la zona de confort. Desde una caminata nocturna hasta una travesía de varios días, cada experiencia nos enseña que somos capaces de mucho más de lo que creemos.</p>
+            <p>La aventura no es solo el destino, sino el camino compartido con amigos que se convierten en hermanos.</p>
           </div>
-          <h3>Servicio</h3>
-          <p>Estamos listos para ayudar a quien lo necesite, sin esperar nada a cambio.</p>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/aventura.jpg" alt="Aventura">
+            <div class="pilar-articulo__icono"><i class="fas fa-compass"></i></div>
+          </div>
         </article>
 
-        <article class="valor-card">
-          <div class="valor-card__icon valor-card__icon--violeta">
-            <i class="fas fa-users"></i>
+        <!-- Pilar 3: Foto a la derecha -->
+        <article class="pilar-articulo">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">03</span>
+            <h3>Servicio</h3>
+            <p class="pilar-articulo__bajada">Siempre listos para ayudar.</p>
+            <p>El escultismo nos enseña que la verdadera felicidad está en dar sin esperar nada a cambio. Participamos en proyectos comunitarios, colectas y acciones solidarias que buscan mejorar nuestro entorno.</p>
+            <p>Aprendemos a mirar al otro con empatía y a comprometernos con las necesidades de nuestra comunidad.</p>
           </div>
-          <h3>Comunidad</h3>
-          <p>Aprendemos a trabajar en equipo, a liderar y a ser parte de algo más grande.</p>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/servicio.jpg" alt="Servicio">
+            <div class="pilar-articulo__icono"><i class="fas fa-hands-helping"></i></div>
+          </div>
         </article>
 
-        <article class="valor-card">
-          <div class="valor-card__icon valor-card__icon--azul">
-            <i class="fas fa-compass"></i>
+        <!-- Pilar 4: Foto a la izquierda (Clase --inverso) -->
+        <article class="pilar-articulo pilar-articulo--inverso">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">04</span>
+            <h3>Comunidad</h3>
+            <p class="pilar-articulo__bajada">Nadie se salva solo.</p>
+            <p>En la patrulla y en la unidad, aprendemos que el trabajo en equipo es fundamental. Cada uno aporta sus talentos únicos para lograr un objetivo común.</p>
+            <p>Acá no hay lugar para el individualismo: celebramos los logros de todos y nos apoyamos en las dificultades. La amistad scout trasciende el campamento y dura toda la vida.</p>
           </div>
-          <h3>Aventura</h3>
-          <p>Exploramos, descubrimos y nos superamos. La vida es una gran aventura.</p>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/comunidad.jpg" alt="Comunidad">
+            <div class="pilar-articulo__icono"><i class="fas fa-users"></i></div>
+          </div>
         </article>
+
+        <!-- Pilar 5: Foto a la derecha -->
+        <article class="pilar-articulo">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">05</span>
+            <h3>Crecimiento</h3>
+            <p class="pilar-articulo__bajada">Superación personal y liderazgo.</p>
+            <p>El método scout nos desafía a aprender cosas nuevas constantemente. A través de las especialidades y los desafíos, cada joven traza su propio camino de crecimiento.</p>
+            <p>Buscamos formar líderes positivos, capaces de tomar decisiones y de inspirar a otros a construir un mundo mejor.</p>
+          </div>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/crecimiento.jpg" alt="Crecimiento">
+            <div class="pilar-articulo__icono"><i class="fas fa-seedling"></i></div>
+          </div>
+        </article>
+
+        <!-- Pilar 6: Foto a la izquierda (Clase --inverso) -->
+        <article class="pilar-articulo pilar-articulo--inverso">
+          <div class="pilar-articulo__texto">
+            <span class="pilar-articulo__numero">06</span>
+            <h3>Espiritualidad</h3>
+            <p class="pilar-articulo__bajada">Fe en acción y propósito de vida.</p>
+            <p>Invitamos a cada joven a preguntarse por el sentido de su vida y a descubrir su propia espiritualidad, sea a través de la fe, la reflexión o la conexión con la naturaleza.</p>
+            <p>Buscamos que nuestros scouts encuentren un propósito que los motive a ser mejores personas cada día.</p>
+          </div>
+          <div class="pilar-articulo__imagen">
+            <img src="img/Pilares/espiritualidad.jpg" alt="Espiritualidad">
+            <div class="pilar-articulo__icono"><i class="fas fa-sun"></i></div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
-<!-- ===== HISTORIA + COLLAGE ===== -->
-<section class="historia" id="historia">
-  <div class="container">
-    <span class="section-eyebrow">Nuestra historia</span>
-    <h2 class="section-title">Más de 35 años de aventuras</h2>
-    <p class="section-subtitle">
-      Desde 1985 formamos generaciones de scouts. Estas son algunas postales
-      de nuestra historia, campamentos y momentos compartidos.
-    </p>
 
-    <div class="historia__grid">
-      <!-- Columna izquierda: texto -->
-      <div class="historia__texto reveal">
-        <h3>Un poco de nosotros</h3>
-        <p>
-          El Grupo Scout Salto Grande nació en 1985 en el corazón de la ciudad, con la
-          misión de ofrecer a niños y jóvenes un espacio de educación no formal
-          basado en los valores del escultismo.
-        </p>
-        <p>
-          A lo largo de estos años, cientos de familias pasaron por nuestras filas,
-          compartiendo campamentos, excursiones, servicios comunitarios y, sobre
-          todo, amistades para toda la vida.
-        </p>
-
-        <ul class="valores-lista">
-          <li><i class="fas fa-leaf"></i> Respeto por la naturaleza</li>
-          <li><i class="fas fa-hands-helping"></i> Servicio a la comunidad</li>
-          <li><i class="fas fa-users"></i> Trabajo en equipo</li>
-          <li><i class="fas fa-star"></i> Superación personal</li>
-        </ul>
-
-        <a href="libro-de-oro.html" class="btn btn--primary" style="margin-top: 24px;">
-          <i class="fas fa-book-open"></i> Ver el Libro de Oro
-        </a>
-      </div>
-
-      <!-- Columna derecha: collage flotante -->
-      <div class="collage reveal">
-        <div class="collage__item collage__item--1">
-          <img src="img/carrusel/1.jpeg" alt="Puente Mono">
-          <span class="collage__caption">Punte Mono</span>
-        </div>
-
-        <div class="collage__item collage__item--2">
-          <img src="img/carrusel/2.jpeg" alt="Bicicletada">
-          <span class="collage__caption">Bicicleteada</span>
-        </div>
-
-        <div class="collage__item collage__item--3">
-          <img src="img/carrusel/3.jpeg" alt="Pase">
-          <span class="collage__caption">Pase Scout</span>
-        </div>
-
-        <div class="collage__item collage__item--4">
-          <img src="img/carrusel/5.jpeg" alt="Taller de Edicion de videos">
-          <span class="collage__caption">Taller de Edición de Videos</span>
-        </div>
-
-        <div class="collage__item collage__item--5">
-          <img src="img/carrusel/6.jpeg" alt="Desfile de 9 de Julio">
-          <span class="collage__caption">Desfile de 9 de Julio</span>
-        </div>
-
-        <!-- Elementos decorativos flotantes -->
-        <div class="collage__deco collage__deco--star">⭐</div>
-        <div class="collage__deco collage__deco--compass">🧭</div>
-        <div class="collage__deco collage__deco--leaf">🌿</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- ===== RAMAS ===== -->
+  <!-- ===== RAMAS (TARJETAS CON COLOR DE FONDO SUTIL) ===== -->
   <section class="ramas-section" id="ramas">
     <div class="container">
       <span class="section-eyebrow">Nuestras ramas</span>
       <h2 class="section-title">Un camino para cada edad</h2>
       <p class="section-subtitle">
-        Cada etapa tiene su propio desafío, su método y su color. Descubrí la tuya.
+        Cada etapa tiene su propio desafío, su método y su color. Descubrí cuál es la tuya.
       </p>
 
       <div class="ramas-grid reveal">
+        <!-- Manada -->
         <article class="rama-card rama-card--manada">
-          <div class="rama-card__edad">6 a 11 años</div>
-          <div class="rama-card__emoji">🐾</div>
-          <h3>Manada</h3>
-          <p>Los más pequeños aprenden jugando, con la fantasía de la selva y los lobatos.</p>
+          <div class="rama-card__cinta"></div>
+          <div class="rama-card__header">
+            <span class="rama-card__edad">6 a 11 años</span>
+            <span class="rama-card__emoji">🐾</span>
+          </div>
+          <div class="rama-card__body">
+            <h3>Manada</h3>
+            <p>Los más pequeños aprenden jugando, con la fantasía de la selva y los lobatos.</p>
+          </div>
+          <div class="rama-card__footer">
+            <a href="libro-de-oro.html" class="rama-card__link">Ver recuerdos <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
 
+        <!-- Unidad -->
         <article class="rama-card rama-card--unidad">
-          <div class="rama-card__edad">11 a 14 años</div>
-          <div class="rama-card__emoji">⚜️</div>
-          <h3>Unidad Scout</h3>
-          <p>La patrulla es la protagonista. Aventura, especialidades y vida al aire libre.</p>
+          <div class="rama-card__cinta"></div>
+          <div class="rama-card__header">
+            <span class="rama-card__edad">11 a 14 años</span>
+            <span class="rama-card__emoji">⚜️</span>
+          </div>
+          <div class="rama-card__body">
+            <h3>Unidad Scout</h3>
+            <p>La patrulla es protagonista. Aventura, especialidades y vida al aire libre.</p>
+          </div>
+          <div class="rama-card__footer">
+            <a href="libro-de-oro.html" class="rama-card__link">Ver recuerdos <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
 
+        <!-- Caminantes -->
         <article class="rama-card rama-card--caminantes">
-          <div class="rama-card__edad">14 a 17 años</div>
-          <div class="rama-card__emoji">🧭</div>
-          <h3>Caminantes</h3>
-          <p>Travesías, proyectos y desafíos personales. Se empieza a elegir el propio camino.</p>
+          <div class="rama-card__cinta"></div>
+          <div class="rama-card__header">
+            <span class="rama-card__edad">14 a 17 años</span>
+            <span class="rama-card__emoji">🧭</span>
+          </div>
+          <div class="rama-card__body">
+            <h3>Caminantes</h3>
+            <p>Travesías, proyectos y desafíos. Se empieza a elegir el propio camino.</p>
+          </div>
+          <div class="rama-card__footer">
+            <a href="libro-de-oro.html" class="rama-card__link">Ver recuerdos <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
 
+        <!-- Rovers -->
         <article class="rama-card rama-card--rovers">
-          <div class="rama-card__edad">17 a 21 años</div>
-          <div class="rama-card__emoji">🎒</div>
-          <h3>Rovers</h3>
-          <p>Servicio, vocación y comunidad. La etapa de devolver todo lo aprendido.</p>
+          <div class="rama-card__cinta"></div>
+          <div class="rama-card__header">
+            <span class="rama-card__edad">17 a 21 años</span>
+            <span class="rama-card__emoji">🎒</span>
+          </div>
+          <div class="rama-card__body">
+            <h3>Rovers</h3>
+            <p>Servicio, vocación y comunidad. La etapa de devolver todo lo aprendido.</p>
+          </div>
+          <div class="rama-card__footer">
+            <a href="libro-de-oro.html" class="rama-card__link">Ver recuerdos <i class="fas fa-arrow-right"></i></a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA LIBRO DE ORO ===== -->
-  <section class="cta-libro">
+  <!-- ===== WHY SECTION ===== -->
+  <section class="why-section">
+    <div class="container why-grid">
+      <div class="why-image reveal">
+        <div class="why-image__blob">
+          <img src="img/contenido/camina.jpg" alt="Jóvenes scouts">
+        </div>
+        <div class="why-image__badge">
+          <strong>¡Te esperamos!</strong>
+          <span>Sábados 15hs</span>
+        </div>
+      </div>
+      
+      <div class="why-text reveal">
+        <span class="section-eyebrow" style="text-align:left;">¿Por qué sumarte?</span>
+        <h2>Mucho más que campamentos</h2>
+        <p>Ser scout es aprender haciendo. Es descubrir que podés liderar, que podés servir, y que la amistad se forja alrededor de un fogón.</p>
+        
+        <ul class="why-list">
+          <li><i class="fas fa-check-circle"></i> Desarrollo de liderazgo y autonomía.</li>
+          <li><i class="fas fa-check-circle"></i> Amistades para toda la vida.</li>
+          <li><i class="fas fa-check-circle"></i> Contacto real con la naturaleza.</li>
+          <li><i class="fas fa-check-circle"></i> Compromiso social y comunitario.</li>
+        </ul>
+
+        <a href="#contacto" class="btn btn--primary">Quiero conocer más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUEVA SECCIÓN: PREGUNTAS FRECUENTES (FAQ) ===== -->
+  <section class="faq-section">
     <div class="container">
-      <div class="cta-libro__box reveal">
-        <div class="cta-libro__deco">📖</div>
-        <div class="cta-libro__content">
-          <h2>Reviví nuestras aventuras</h2>
-          <p>
-            Más de 35 años de campamentos, fogones y servicios. Entrá al Libro de Oro
-            y recorré las memorias de cada rama.
-          </p>
-          <a href="libro-de-oro.html" class="btn btn--primary btn--lg">
-            <i class="fas fa-arrow-right"></i> Explorar el Libro de Oro
-          </a>
+      <span class="section-eyebrow">Dudas frecuentes</span>
+      <h2 class="section-title">Preguntas Frecuentes</h2>
+      <p class="section-subtitle">
+        Si tenés alguna otra duda, no dudes en escribirnos por redes o acercarte un sábado.
+      </p>
+
+      <div class="faq-grid reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿A partir de qué edad pueden entrar? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Desde los 6 años (rama Manada) hasta los 21 años (rama Rovers). También hay lugar para adultos que quieran sumarse como dirigentes o colaboradores.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hace falta tener experiencia previa? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>¡Para nada! La gran mayoría de nuestros integrantes empezó sin saber nada de scoutismo. Acá se aprende haciendo y compartiendo con los demás.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Qué tengo que llevar el primer día? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Solo ropa cómoda, gorra, protector solar, una botella de agua y muchas ganas de pasarla bien. El uniforme se consigue después.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hay cuota mensual? <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, hay una cuota social muy accesible que nos ayuda a mantener el grupo, los materiales y el lugar. Si tenés alguna dificultad, acercate a hablar con nosotros.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACTO (solo redes + mapa) ===== -->
+  <!-- ===== CONTACTO ===== -->
   <section class="contacto" id="contacto">
     <div class="container">
       <span class="section-eyebrow">Contacto</span>
@@ -296,7 +434,6 @@
       </p>
 
       <div class="contacto__grid">
-        <!-- Redes + info -->
         <div class="contacto__info">
           <h3>Seguinos</h3>
           <p class="contacto__lead">
@@ -308,18 +445,16 @@
               <i class="fab fa-instagram"></i>
               <div>
                 <strong>Instagram</strong>
-                <span>gs.saltogrande527</span>
+                <span>@gs.saltogrande527</span>
               </div>
             </a>
-
-            <a href="https://facebook.com/tugrupo" target="_blank" rel="noopener" class="red-card red-card--fb">
+            <a href="https://www.facebook.com/profile.php?id=100003026595438" target="_blank" rel="noopener" class="red-card red-card--fb">
               <i class="fab fa-facebook-f"></i>
               <div>
                 <strong>Facebook</strong>
-                <span>/tugrupo</span>
+                <span>/Grupo Scout Salto Grande</span>
               </div>
             </a>
-
             <a href="https://wa.me/5491112345678" target="_blank" rel="noopener" class="red-card red-card--wa">
               <i class="fab fa-whatsapp"></i>
               <div>
@@ -327,7 +462,6 @@
                 <span>+54 9 11 1234-5678</span>
               </div>
             </a>
-
             <a href="mailto:info@gruposcout1234.org.ar" class="red-card red-card--mail">
               <i class="fas fa-envelope"></i>
               <div>
@@ -346,29 +480,27 @@
           </div>
         </div>
 
-        <!-- Mapa -->
         <div class="contacto__mapa">
           <h3>Nuestra sede</h3>
           <div class="mapa">
-            <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212.9113041704271!2d-58.02957165354718!3d-31.370543371772015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade93587cf43a1%3A0x526fcb2664f45c2e!2sGrupo%20Scout%20527%20Salto%20Grande-%20Scouts%20de%20Argentina%20AC!5e0!3m2!1ses-419!2sar!4v1791901367403!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2025.5460564591788!2d-58.02999929481998!3d-31.37142697291959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade93587cf43a1%3A0x526fcb2664f45c2e!2sGrupo%20Scout%20527%20Salto%20Grande-%20Scouts%20de%20Argentina%20AC!5e0!3m2!1ses-419!2sar!4v1792611763674!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
           </div>
           <p class="mapa__direccion">
-            <i class="fas fa-map-marker-alt"></i> 804 Córdoba, Concordia, Entre Ríos, Argentina
+            <i class="fas fa-map-marker-alt"></i> Lugar: Sede del Grupo Scout, calle Córdoba 852.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER CORREGIDO ===== -->
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__brand">
         <div class="footer__logo">⚜️</div>
         <div>
-          <strong>Grupo Scout N° 527 Salto Grande</strong>
+          <strong>Grupo Scout Salto Grande N° 527</strong>
           <p>Construyendo un mundo mejor desde 1985.</p>
         </div>
       </div>
@@ -380,7 +512,7 @@
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
-      <p class="footer__copy">© 2026 Grupo Scout N° 527 Salto Grande · Hecho Por Isaias.</p>
+      <p class="footer__copy">© 2026 Grupo Scout N° 527 · Hecho Por Integrantes del Grupo</p>
     </div>
   </footer>
 

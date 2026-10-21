@@ -1,27 +1,22 @@
-const muro           = document.getElementById('muro');
-const ramaTitulo     = document.getElementById('ramaTitulo');
+const muro = document.getElementById('muro');
+const ramaTitulo = document.getElementById('ramaTitulo');
 const ramaDescripcion = document.getElementById('ramaDescripcion');
-const botonesRama    = document.querySelectorAll('.rama-btn');
+const botonesRama = document.querySelectorAll('.rama-btn');
 
-// Descripciones por rama
 const descripcionesRama = {
-  manada:     'Los más pequeños del grupo, aprendiendo jugando y descubriendo la selva.',
-  unidad:     'La patrulla es protagonista. Aventura, especialidades y vida al aire libre.',
+  manada: 'Los más pequeños del grupo, aprendiendo jugando y descubriendo la selva.',
+  unidad: 'La patrulla es protagonista. Aventura, especialidades y vida al aire libre.',
   caminantes: 'Travesías, proyectos y desafíos. Se empieza a elegir el propio camino.',
-  rovers:     'Servicio, vocación y comunidad. Devolver todo lo aprendido.'
+  rovers: 'Servicio, vocación y comunidad. Devolver todo lo aprendido.',
+  grupo: 'Los momentos que nos unen como una gran familia scout a lo largo del año.'
 };
 
-/* ------------------------------------------------------------
-   Render del muro de álbumes
-   ------------------------------------------------------------ */
 function renderMuro(rama) {
   const datos = datosRamas[rama];
 
-  // Título dinámico
   ramaTitulo.textContent = datos.nombre;
   ramaDescripcion.textContent = descripcionesRama[rama] || '';
 
-  // Animación de salida
   muro.classList.add('fade-out');
 
   setTimeout(() => {
@@ -29,7 +24,7 @@ function renderMuro(rama) {
       muro.innerHTML = `
         <div class="muro-vacio">
           <i class="fas fa-campground"></i>
-          <p>Todavía no hay recuerdos cargados para esta rama.</p>
+          <p>Todavía no hay recuerdos cargados para esta categoría.</p>
         </div>
       `;
     } else {
@@ -59,24 +54,19 @@ function renderMuro(rama) {
         `;
       }).join('');
 
-      // Click en cada tarjeta → abrir modal
       muro.querySelectorAll('.album-card').forEach(card => {
         card.addEventListener('click', () => {
           const r = card.dataset.rama;
           const idx = parseInt(card.dataset.index, 10);
-          abrirModal(r, idx);   // definido en modal.js
+          abrirModal(r, idx);
         });
       });
     }
 
-    // Animación de entrada
     muro.classList.remove('fade-out');
   }, 200);
 }
 
-/* ------------------------------------------------------------
-   Inicialización
-   ------------------------------------------------------------ */
 renderMuro('manada');
 
 botonesRama.forEach(btn => {

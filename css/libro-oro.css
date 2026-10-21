@@ -1,8 +1,3 @@
-/* ============================================================
-   LIBRO DE ORO — Página independiente
-   ============================================================ */
-
-/* Hero de la página */
 .libro-hero {
   background: linear-gradient(135deg, var(--azul-oscuro), var(--violeta-oscuro));
   color: var(--blanco);
@@ -32,10 +27,7 @@
   transition: var(--transicion);
 }
 
-.libro-hero__back:hover {
-  color: var(--blanco);
-  transform: translateX(-4px);
-}
+.libro-hero__back:hover { color: var(--blanco); transform: translateX(-4px); }
 
 .libro-hero__title {
   font-family: var(--font-display);
@@ -63,18 +55,14 @@
   z-index: 1;
 }
 
-/* ============================================================
-   SECCIÓN PRINCIPAL
-   ============================================================ */
 .libro-main {
   padding: 0 0 100px;
   background: var(--crema);
-  margin-top: -50px;   /* solapa con el hero */
+  margin-top: -50px;
   position: relative;
   z-index: 2;
 }
 
-/* --- Tabs de ramas --- */
 .ramas-tabs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -101,34 +89,51 @@
   color: var(--texto);
   font-family: inherit;
 }
+/* ============================================================
+   AJUSTES PARA EL NUEVO BOTÓN DE GRUPO
+   ============================================================ */
 
-.rama-btn__emoji {
-  font-size: 1.8rem;
-  line-height: 1;
+/* Hacemos que el botón de Grupo ocupe toda la fila de abajo */
+.rama-btn--grupo {
+  grid-column: 1 / -1;
+  justify-content: center;
+  border: 2px dashed var(--gris-claro);
 }
 
-.rama-btn__txt {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+/* Color azul institucional cuando está activo */
+.rama-btn--grupo.active {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  color: var(--blanco);
+  border-color: var(--azul);
+  border-style: solid;
 }
 
-.rama-btn__txt strong {
-  font-weight: 700;
-  font-size: 0.95rem;
+.rama-btn--grupo.active .rama-btn__txt small {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.rama-btn__txt small {
-  font-size: 0.75rem;
-  opacity: 0.65;
-  font-weight: 500;
+/* Color de la cinta superior de las tarjetas cuando es "grupo" */
+.album-card[data-rama="grupo"]::before { 
+  background: var(--dorado); 
 }
 
-.rama-btn:hover {
-  background: var(--crema);
+/* Ajuste responsive para que el botón de grupo se vea bien en celular */
+@media (max-width: 768px) {
+  .rama-btn--grupo {
+    grid-column: 1 / -1;
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
 }
+.rama-btn__emoji { font-size: 1.8rem; line-height: 1; }
+.rama-btn__txt { display: flex; flex-direction: column; line-height: 1.2; }
+.rama-btn__txt strong { font-weight: 700; font-size: 0.95rem; }
+.rama-btn__txt small { font-size: 0.75rem; opacity: 0.65; font-weight: 500; }
 
-/* Estados activos por rama */
+.rama-btn:hover { background: var(--crema); }
+
 .rama-btn--manada.active     { background: linear-gradient(135deg, #f5b800, #d99a00); color: #3a2c00; border-color: #d99a00; }
 .rama-btn--unidad.active     { background: linear-gradient(135deg, #2d7a3e, #1e5a2c); color: var(--blanco); border-color: #1e5a2c; }
 .rama-btn--caminantes.active { background: linear-gradient(135deg, #2c7bb6, #1a5a8c); color: var(--blanco); border-color: #1a5a8c; }
@@ -136,36 +141,16 @@
 
 .rama-btn.active .rama-btn__txt small { opacity: 0.8; }
 
-/* --- Header dinámico --- */
-.rama-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+.rama-header { text-align: center; margin-bottom: 40px; }
+.rama-header h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--azul); margin-bottom: 6px; letter-spacing: -0.5px; }
+.rama-header p { color: var(--texto-soft); font-size: 1rem; }
 
-.rama-header h2 {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--azul);
-  margin-bottom: 6px;
-  letter-spacing: -0.5px;
-}
-
-.rama-header p {
-  color: var(--texto-soft);
-  font-size: 1rem;
-}
-
-/* ============================================================
-   MURO DE RECUERDOS (grid de álbumes)
-   ============================================================ */
 .muro {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
-/* --- Tarjeta de álbum --- */
 .album-card {
   background: var(--blanco);
   border-radius: 20px;
@@ -178,153 +163,44 @@
   position: relative;
 }
 
-.album-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--sombra-lg);
-}
+.album-card:hover { transform: translateY(-8px); box-shadow: var(--sombra-lg); }
 
-/* Imagen de portada */
-.album-card__cover {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--violeta), var(--azul));
-}
+.album-card__cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(135deg, var(--violeta), var(--azul)); }
+.album-card__cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.album-card:hover .album-card__cover img { transform: scale(1.1); }
+.album-card__cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55)); }
 
-.album-card__cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.album-card:hover .album-card__cover img {
-  transform: scale(1.1);
-}
-
-.album-card__cover::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55));
-}
-
-/* Fecha sobre la portada */
 .album-card__fecha {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--azul);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border-radius: var(--radio-full);
-  backdrop-filter: blur(6px);
+  position: absolute; top: 16px; left: 16px; z-index: 2;
+  background: rgba(255, 255, 255, 0.95); color: var(--azul);
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 6px 12px; border-radius: var(--radio-full); backdrop-filter: blur(6px);
 }
 
-/* Badge con la cantidad de fotos */
 .album-card__badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.55);
-  color: var(--blanco);
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: var(--radio-full);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  position: absolute; top: 16px; right: 16px; z-index: 2;
+  background: rgba(0, 0, 0, 0.55); color: var(--blanco);
+  font-size: 0.75rem; font-weight: 600; padding: 6px 12px;
+  border-radius: var(--radio-full); backdrop-filter: blur(6px);
+  display: flex; align-items: center; gap: 6px;
 }
 
-/* Info debajo de la portada */
-.album-card__body {
-  padding: 22px 24px 24px;
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Banda superior de color según la rama */
-.album-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  z-index: 3;
-}
-
+.album-card__body { padding: 22px 24px 24px; position: relative; flex: 1; display: flex; flex-direction: column; }
+.album-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; z-index: 3; }
 .album-card[data-rama="manada"]::before     { background: var(--manada); }
 .album-card[data-rama="unidad"]::before     { background: var(--unidad); }
 .album-card[data-rama="caminantes"]::before { background: var(--caminantes); }
 .album-card[data-rama="rovers"]::before     { background: var(--rovers); }
 
-.album-card__titulo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--azul);
-  margin-bottom: 8px;
-  line-height: 1.25;
-  letter-spacing: -0.3px;
-}
+.album-card__titulo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--azul); margin-bottom: 8px; line-height: 1.25; letter-spacing: -0.3px; }
+.album-card__lugar { font-size: 0.9rem; color: var(--texto-soft); display: flex; align-items: center; gap: 6px; margin-bottom: 16px; }
+.album-card__lugar i { color: var(--rojo); }
 
-.album-card__lugar {
-  font-size: 0.9rem;
-  color: var(--texto-soft);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 16px;
-}
+.album-card__cta { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: var(--violeta); font-weight: 700; font-size: 0.9rem; transition: var(--transicion); }
+.album-card:hover .album-card__cta { gap: 14px; color: var(--rojo); }
 
-.album-card__lugar i {
-  color: var(--rojo);
-}
+.muro-vacio { grid-column: 1 / -1; text-align: center; padding: 80px 24px; color: var(--texto-soft); }
+.muro-vacio i { font-size: 3rem; color: var(--violeta-claro); margin-bottom: 16px; display: block; }
 
-.album-card__cta {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--violeta);
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: var(--transicion);
-}
-
-.album-card:hover .album-card__cta {
-  gap: 14px;
-  color: var(--rojo);
-}
-
-/* Mensaje vacío */
-.muro-vacio {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 80px 24px;
-  color: var(--texto-soft);
-}
-
-.muro-vacio i {
-  font-size: 3rem;
-  color: var(--violeta-claro);
-  margin-bottom: 16px;
-  display: block;
-}
-
-/* Animación al cambiar de rama */
 .muro.fade-out { opacity: 0; transform: translateY(10px); }
-.muro {
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
+.muro { transition: opacity 0.35s ease, transform 0.35s ease; }

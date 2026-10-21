@@ -1,3 +1,6 @@
+/* ============================================================
+   1. REVEAL ON SCROLL (Aparecer al scrollear)
+   ============================================================ */
 const reveals = document.querySelectorAll('.reveal');
 
 if (reveals.length) {
@@ -16,10 +19,12 @@ if (reveals.length) {
   reveals.forEach(el => observer.observe(el));
 }
 
+/* ============================================================
+   2. LIGHTBOX PARA EL COLLAGE (Ver fotos grandes)
+   ============================================================ */
 const collageItems = document.querySelectorAll('.collage__item');
 
 if (collageItems.length) {
-  // Creamos un lightbox básico solo para el collage
   const collageLightbox = document.createElement('div');
   collageLightbox.className = 'lightbox';
   collageLightbox.innerHTML = `
@@ -60,3 +65,57 @@ if (collageItems.length) {
     if (e.key === 'Escape' && collageLightbox.classList.contains('activo')) cerrar();
   });
 }
+
+/* ============================================================
+   3. CONTADOR ANIMADO (Sección Stats)
+   ============================================================ */
+const contadores = document.querySelectorAll('.contador');
+
+if (contadores.length) {
+  const animarContador = (el) => {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const duration = 2000; // 2 segundos
+    const stepTime = Math.abs(Math.floor(duration / target));
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += Math.ceil(target / 50); // Incremento suave
+      if (current >= target) {
+        el.textContent = target + '+';
+        clearInterval(timer);
+      } else {
+        el.textContent = current + '+';
+      }
+    }, stepTime);
+  };
+
+  const observerStats = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animarContador(entry.target);
+        observerStats.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  contadores.forEach(c => observerStats.observe(c));
+}
+
+/* ============================================================
+   4. ACORDEÓN FAQ (Preguntas Frecuentes)
+   ============================================================ */
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const btn = item.querySelector('.faq-question');
+  
+  btn.addEventListener('click', () => {
+    // Cerrar otros abiertos (opcional)
+    faqItems.forEach(other => {
+      if (other !== item) other.classList.remove('activo');
+    });
+    
+    // Alternar el actual
+    item.classList.toggle('activo');
+  });
+});

@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="css/variables.css">
@@ -20,14 +20,14 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVBAR (Sin botón de noche) ===== -->
   <nav class="navbar" id="navbar">
     <div class="container navbar__container">
       <a href="index.html" class="navbar__logo">
         <div class="navbar__logo-img">⚜️</div>
         <div class="navbar__logo-text">
           Grupo Scout
-          <span>Argentina · Desde 1985</span>
+          <span>Salto Grande · Desde 1985</span>
         </div>
       </a>
 
@@ -55,15 +55,16 @@
       </h1>
       <p class="libro-hero__subtitle">
         Nuestra bitácora de campamentos y grandes aventuras.
-        Elegí una rama y reviví los momentos.
+        Elegí una categoría y reviví los momentos.
       </p>
     </div>
   </header>
 
-  <!-- ===== FILTROS DE RAMA ===== -->
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <section class="libro-main">
     <div class="container">
-      <!-- Tabs de ramas -->
+      
+      <!-- Tabs de selección -->
       <div class="ramas-tabs" id="ramasTabs">
         <button class="rama-btn rama-btn--manada active" data-rama="manada">
           <span class="rama-btn__emoji">🐾</span>
@@ -96,20 +97,29 @@
             <small>17 a 21 años</small>
           </span>
         </button>
+
+        <!-- Botón de Grupo (Ocupa toda la fila) -->
+        <button class="rama-btn rama-btn--grupo" data-rama="grupo">
+          <span class="rama-btn__emoji">🏕️</span>
+          <span class="rama-btn__txt">
+            <strong>Grupo en General</strong>
+            <small>Campamentos y Aniversarios</small>
+          </span>
+        </button>
       </div>
 
-      <!-- Encabezado dinámico de la rama -->
+      <!-- Título dinámico de la sección -->
       <div class="rama-header" id="ramaHeader">
         <h2 id="ramaTitulo">🐾 Manada</h2>
         <p id="ramaDescripcion">Los más pequeños del grupo, aprendiendo jugando.</p>
       </div>
 
-      <!-- Muro de recuerdos (grid de álbumes) -->
+      <!-- Grilla de álbumes (se llena desde JS) -->
       <div class="muro" id="muro"></div>
     </div>
   </section>
 
-  <!-- ===== MODAL (para el álbum de fotos) ===== -->
+  <!-- ===== MODAL (Para ver fotos) ===== -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modal">
       <div class="modal__header">
@@ -132,7 +142,7 @@
       <div class="footer__brand">
         <div class="footer__logo">⚜️</div>
         <div>
-          <strong>Grupo Scout N° 1234</strong>
+          <strong>Grupo Scout Salto Grande N° 527</strong>
           <p>Construyendo un mundo mejor desde 1985.</p>
         </div>
       </div>
@@ -142,10 +152,11 @@
         <li><a href="libro-de-oro.html">Libro de Oro</a></li>
         <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
-      <p class="footer__copy">© 2026 Grupo Scout Salto Grande N° 527 · Hecho por Isaias.</p>
+      <p class="footer__copy">© 2026 Grupo Scout N° 527 · Hecho por Integrantes del Grupo</p>
     </div>
   </footer>
 
+  <!-- Scripts (Sin el de theme) -->
   <script src="js/data.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/libro-oro.js"></script>

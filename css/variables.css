@@ -1,5 +1,4 @@
 :root {
-  /* Institucionales */
   --azul:        #1a3a6b;
   --azul-claro:  #2c5282;
   --azul-oscuro: #0f2447;
@@ -10,13 +9,11 @@
   --violeta-claro:  #8a5fc4;
   --violeta-oscuro: #4a2a70;
 
-  /* Ramas */
   --manada:     #f5b800;
   --unidad:     #2d7a3e;
   --caminantes: #2c7bb6;
   --rovers:     #c1272d;
 
-  /* Neutros */
   --crema:      #faf7f2;
   --beige:      #f5efe6;
   --blanco:     #ffffff;
@@ -27,19 +24,79 @@
 
   --dorado:     #e6b422;
 
-  /* Sombras */
   --sombra-sm: 0 2px 8px rgba(15, 36, 71, 0.06);
   --sombra:    0 8px 20px rgba(15, 36, 71, 0.10);
   --sombra-lg: 0 20px 48px rgba(15, 36, 71, 0.18);
 
-  /* Layout */
   --radio:       16px;
   --radio-sm:    12px;
   --radio-full:  999px;
   --container:   1200px;
   --transicion:  all 0.3s ease;
 
-  /* Fuentes */
   --font-body:    'Inter', system-ui, sans-serif;
   --font-display: 'Outfit', 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+  --crema:      #0f1420;
+  --beige:      #161c2b;
+  --blanco:     #1c2333;
+  --gris-claro: #2a3247;
+  --gris:       #8892a8;
+  --texto:      #e8ecf5;
+  --texto-soft: #9aa4bc;
+  --azul:       #4a7bc8;
+  --azul-claro: #6a9bdd;
+  --azul-oscuro:#0a0f1c;
+  --rojo:       #e63946;
+  --rojo-claro: #ff5566;
+  --rojo-oscuro:#a8232e;
+  --violeta:        #a074d8;
+  --violeta-claro:  #c19de8;
+  --violeta-oscuro: #2a1a42;
+
+  --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --sombra:    0 8px 20px rgba(0, 0, 0, 0.5);
+  --sombra-lg: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+html, body, section, header, footer, nav, div, article {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+[data-theme="dark"] .hero__overlay {
+  background: linear-gradient(135deg, rgba(10, 15, 28, 0.9) 0%, rgba(42, 26, 66, 0.8) 50%, rgba(168, 35, 46, 0.7) 100%);
+}
+[data-theme="dark"] .navbar {
+  background: rgba(10, 15, 28, 0.92);
+}
+[data-theme="dark"] .album-card__fecha {
+  background: rgba(28, 35, 51, 0.95);
+  color: var(--violeta-claro);
+}
+[data-theme="dark"] .valor-card,
+[data-theme="dark"] .red-card {
+  background: var(--beige);
+}
+[data-theme="dark"] .modal {
+  background: var(--blanco);
+  color: var(--texto);
+}
+[data-theme="dark"] .modal__header {
+  background: var(--blanco);
+  border-bottom-color: var(--gris-claro);
+}
+[data-theme="dark"] .modal__titulo {
+  color: var(--violeta-claro);
+}
+[data-theme="dark"] .lightbox {
+  background: rgba(0, 0, 0, 0.96);
+}
+[data-theme="dark"] .rama-card__footer {
+  background: var(--azul-oscuro);
+}
+[data-theme="dark"] .bento-card--crema {
+  background: var(--beige);
+  border-color: var(--gris-claro);
 }
